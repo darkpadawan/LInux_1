@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Primeiras aulas
+
 converte_imagem(){
 	local caminho_imagem=$1
 	local imagem_sem_extensao=$ (ls $caminho_imagem | awk -F. '{ print $1 }'
@@ -23,7 +25,7 @@ varrer_diretorio (){
 }
 
 varrer_diretorio ~/Downloads/imagens-novos-livros
-is [ $? -eq 0 ]
+if [ $? -eq 0 ]
 then
 	echo "Conversao realizada com sucesso"
 else
